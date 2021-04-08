@@ -1,0 +1,59 @@
+ main {
+max-width: 800 px;
+margin: auto;
+ }
+ 
+ body {
+     max-width: 800 px;
+     margin: auto;
+     text-align: center;
+     background-image:url("bg.png");
+color: grey
+
+}
+h1,h2,h3 {
+    font-family: sans-serif
+    
+}
+
+p {
+    font-family: sans-serif
+    
+}
+#bannersize {
+    max-width: 800px;
+}
+
+.navi {
+overflow: hidden;
+background-color: black;
+position: fixed;
+margin-left: 1100px;
+top: 0;
+}
+
+.navi a {
+    font-family: sans-serif;
+    float: left;
+  display: block;
+  color:blanchedalmond;
+  padding: 11px 11px;
+}
+
+.navi a:hover {
+    background:black;
+    color:darkgoldenrod;
+}
+
+.formular {
+    border: none;
+}
+
+#socialmedia {
+    overflow: hidden;
+     top: 0;
+     margin-left: 10px;
+}
+table {
+    margin: auto;
+}
