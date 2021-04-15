@@ -13,6 +13,54 @@ margin: auto;
 color: grey;
 font-family: sans-serif;
 }
+
+@media screen and (max-width: 600px) {
+    .navi {
+        margin: auto;
+        }
+        h1 {
+padding-top: 15%;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+    #bannersize {
+    display: none;
+    z-index: 0;
+}
+#socialmedia {
+    color: black;
+    width: 20px;
+    height: auto;
+   position: absolute;
+    z-index: 1;
+     top: 0;
+     margin-left:10em;
+     margin-top:5em;
+    
+}
+form {
+    padding: 5%;
+}
+video {
+    width: 100%;
+    height: auto;
+}
+#k {
+    text-align: left;
+    margin: 0 0 20px; 
+      margin-top: 130px;
+}
+table {
+    width: 100%;
+    height: auto;
+}
+body {
+    max-width: 600px;
+    padding: 2%;
+}
+}
 header {
     max-width: 800px;
     text-align: center;
@@ -31,12 +79,47 @@ h1,h2,h3 {
     color: darkgoldenrod;
     
 }
+nav + h1 {
+    color: rgb(155, 114, 9);
+    
+}
+img[alt="logo"] {
+    background: rgb(179, 179, 179);
+    padding: 5%;
+}
 
 
 #bannersize {
     z-index: 0;
     max-width: 800px;
 }
+
+img {
+    animation-name: slidein;
+    animation-duration: 1.5s;
+}
+
+@keyframes slidein {
+    from {
+        margin-top: 20%;
+}
+ to {
+margin-top: 0;}
+}
+
+.navi {
+    animation-name: slidein2;
+    animation-duration: 2s; 
+}
+
+@keyframes slidein2 {
+    from {
+        padding: 0.4%;
+}
+
+}
+
+
 #Portfolio {
     color: darkgoldenrod;
 }
@@ -52,7 +135,7 @@ overflow: hidden;
 z-index: 1;
 background-color: black;
 position: fixed;
-margin-left: 550px;
+margin: auto;
 top: 0;
 }
 
@@ -105,7 +188,7 @@ input {
 #k {
     text-align: left;
     margin: 0 0 20px; 
-      margin-top: 120px;
+      margin-top: 50px;
 }
 #nachricht {
     font-family: sans-serif;
@@ -114,12 +197,15 @@ input {
 }
 
 #socialmedia {
-    position: absolute;
+    color: black;
+    width: 50px;
+    height: auto;
+   position: absolute;
     z-index: 1;
-    overflow: hidden;
      top: 0;
-     margin-left: 300px;
-     margin-top: 60px;
+     margin-left:20em;
+     margin-top:5em;
+    
 }
 #socialmedia :hover {
     color: black;
@@ -127,4 +213,13 @@ input {
 }
 table {
     margin: auto;
+    width: 100%;
+    height: auto;
 }
+
+table img [alt=logo] {
+background: blue;
+stroke: blue 5px;
+}
+
+
