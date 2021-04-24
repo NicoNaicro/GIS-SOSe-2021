@@ -99,7 +99,6 @@ function factorial(n) {
 factorial(10);
 //* f)
 function leapyears() {
-    let i = "#";
     // tslint:disable-next-line: typedef
     for (let i = 1900; i <= 2021; i++) {
         if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0) {
@@ -110,9 +109,10 @@ function leapyears() {
 leapyears();
 //* Aufgabe 6 a)
 function raute() {
-    // tslint:disable-next-line: typedef
-    for (let i = 0; i < 7; i++) {
-        console.log("i");
+    let hashtag = "#";
+    for (let i = 1; i <= 7; i++) {
+        console.log(hashtag);
+        hashtag = hashtag + "#";
     }
 }
 raute();
@@ -145,4 +145,33 @@ function zahlen2() {
     }
 }
 zahlen2();
+//* d)
+function schach() {
+    let schach1 = " # # # #";
+    let schach2 = "# # # # ";
+    for (let i = 1; i < 8; i++) {
+        if (i % 2 != 0) {
+            console.log(schach1);
+        }
+        if (i % 2 == 0) {
+            console.log(schach2);
+        }
+    }
+}
+schach();
+//* e)
+function meinschach() {
+    let leer = " ";
+    let hashtag = "# # # #";
+    for (let i = 1; i <= 7; i++) {
+        console.log(hashtag);
+        if (i % 2 != 0) {
+            hashtag = hashtag + leer;
+        }
+        else {
+            hashtag = leer + hashtag;
+        }
+    }
+}
+meinschach();
 //# sourceMappingURL=script.js.map

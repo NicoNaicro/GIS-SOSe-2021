@@ -122,7 +122,7 @@ factorial(10);
 //* f)
 
 function leapyears(): void {
-    let i: string = "#";
+
     // tslint:disable-next-line: typedef
     for (let i = 1900; i <= 2021; i++) {
         if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0) {
@@ -136,19 +136,21 @@ leapyears();
 //* Aufgabe 6 a)
 
 function raute(): void {
-    
-    // tslint:disable-next-line: typedef
-    for (let i = 0; i < 7; i++) {
-        console.log("i");
-
+    let hashtag: string = "#";
+    for (let i = 1; i <= 7; i++) {
+        console.log(hashtag);
+        hashtag = hashtag + "#";
     }
-    
+
+
 }
 raute();
+
 
 //* b)
 
 function zahlen(): void {
+
     // tslint:disable-next-line: typedef
     for (let i = 1; i <= 100; i++) {
         if (i % 3 == 0) {
@@ -173,7 +175,7 @@ function zahlen2(): void {
         if (i % 3 == 0 && i % 5 == 0) {
             console.log("FizzBuzz");
         }
-       
+
         else {
             console.log(i);
         }
@@ -181,3 +183,39 @@ function zahlen2(): void {
     }
 }
 zahlen2();
+
+//* d)
+
+function schach(): void {
+    let schach1: string = " # # # #";
+    let schach2: string = "# # # # ";
+    for (let i = 1; i < 8; i++) {
+        if (i % 2 != 0) {
+            console.log(schach1);
+
+        }
+        if (i % 2 == 0) {
+            console.log(schach2);
+        }
+    }
+}
+schach();
+//* e)
+
+function meinschach(): void {
+    let leer: string = " "
+    let hashtag: string = "# # # #";
+    for (let i = 1; i <= 7; i++) {
+        console.log(hashtag);
+        if (i % 2 != 0) {
+            hashtag = hashtag + leer;
+        }
+        else {
+            hashtag = leer + hashtag
+        }
+    }
+
+
+}
+meinschach();
+
