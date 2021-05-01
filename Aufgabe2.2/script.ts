@@ -4,7 +4,7 @@ console.log("Aufgabe 1a)");
 
 function min(werte: number[]): void {
     let min: number = werte[0];
-    for (let i = 0; i < werte.length; i++) {
+    for (let i: number = 0; i < werte.length; i++) {
         if (werte[i] < min) {
             min = werte[i];
         }
@@ -24,7 +24,7 @@ function iseven(eingabe: number): void {
         console.log(true);
     }
     else {
-        console.log(false)
+        console.log(false);
     }
 
 
@@ -44,17 +44,17 @@ let p1: Person = {
     vorname: "Benjamin",
     nachname: "Maier",
     alter: 19
-}
+};
 let p2: Person = {
     vorname: "Max",
     nachname: "Mustermann",
     alter: 21
-}
+};
 let p3: Person = {
     vorname: "Tim",
     nachname: "Müller",
     alter: 22
-}
+};
 
 let p4: Person = neuePerson("alex", "mauer", 34);
 console.log(p4.vorname);
@@ -65,7 +65,7 @@ console.log("______________________");
 
 
 function neuePerson(vorname1: string, nachname1: string, alter1: number): Person {
-    let p: Person = { vorname: vorname1, nachname: nachname1, alter: alter1 }
+    let p: Person = { vorname: vorname1, nachname: nachname1, alter: alter1 };
     return p;
 }
 
@@ -74,10 +74,10 @@ allePersonen.push(p1);
 allePersonen.push(p2);
 allePersonen.push(p3);
 
-function showInfo(Person: Person): void {
-    console.log(Person.vorname);
-    console.log(Person.nachname);
-    console.log(Person.alter);
+function showInfo(person: Person): void {
+    console.log(person.vorname);
+    console.log(person.nachname);
+    console.log(person.alter);
 
 
 

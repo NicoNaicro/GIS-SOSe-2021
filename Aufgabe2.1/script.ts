@@ -211,7 +211,7 @@ function meinschach(): void {
             hashtag = hashtag + leer;
         }
         else {
-            hashtag = leer + hashtag
+            hashtag = leer + hashtag;
         }
     }
 
