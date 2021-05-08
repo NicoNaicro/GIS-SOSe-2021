@@ -51,10 +51,10 @@ let allePersonen = [];
 allePersonen.push(p1);
 allePersonen.push(p2);
 allePersonen.push(p3);
-function showInfo(Person) {
-    console.log(Person.vorname);
-    console.log(Person.nachname);
-    console.log(Person.alter);
+function showInfo(person) {
+    console.log(person.vorname);
+    console.log(person.nachname);
+    console.log(person.alter);
 }
 showInfo(p1);
 showInfo(p2);
