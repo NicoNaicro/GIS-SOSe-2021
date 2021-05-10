@@ -1,3 +1,5 @@
+namespace Aufgabe2_3 {
+
 let addRecButton: HTMLElement = document.createElement("Button");
 let textRecButton: Text = document.createTextNode("Rechteck");
 addRecButton.style.backgroundColor = "green";
@@ -43,4 +45,4 @@ for (let i: number = 0; i < 5; i++) {
     createDivRec();
 }
 
-
+}
