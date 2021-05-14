@@ -1,4 +1,4 @@
-namespace Aufgabe2_3 {
+namespace Aufgabe2_4 {
 
 
     //    export let alleWaffeln: Waffel[] = [{ waffelart: "schokowaffel", waffelbild: "braunwaffel.png" }, { waffelart: "mangowaffel", waffelbild: "orangewaffel.png" }, { waffelart: "erdbeerwaffel", waffelbild: "pinkwaffel.png" }];

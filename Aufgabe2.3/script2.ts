@@ -1,4 +1,4 @@
-namespace Aufgabe2_3 {
+namespace Aufgabe2_4 {
 
 
     function createWaffleOptions(_waffel: Waffel): HTMLElement {
