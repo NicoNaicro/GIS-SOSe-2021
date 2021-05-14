@@ -16,8 +16,8 @@ var Aufgabe2_3;
         chooseButton.dataset.waffelart = _waffel.waffelart;
         return div;
     }
-    for (let i = 0; i < Aufgabe2_3.alleWaffeln.length; i++) {
-        let waffleElements = createWaffleOptions(Aufgabe2_3.alleWaffeln[i]);
+    for (let i = 0; i < Aufgabe2_3.g.length; i++) {
+        let waffleElements = createWaffleOptions(Aufgabe2_3.g.Kugel[i]);
         document.body.appendChild(waffleElements);
         console.log(waffleElements);
     }

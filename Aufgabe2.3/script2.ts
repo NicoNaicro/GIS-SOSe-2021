@@ -17,11 +17,11 @@ namespace Aufgabe2_3 {
         return div;
     }
 
-    for (let i: number = 0; i < alleWaffeln.length; i++) {
-        let waffleElements: HTMLElement = createWaffleOptions(alleWaffeln[i]);
+    for (let i: number = 0; i < g.Waffel.length; i++) {
+        let waffleElements: HTMLElement = createWaffleOptions(g.Waffel[i]);
         document.body.appendChild(waffleElements);
         console.log(waffleElements);
-        
+
 
     }
 
@@ -29,6 +29,10 @@ namespace Aufgabe2_3 {
         let output: HTMLElement = <HTMLElement>_input.target;
         console.log(output.dataset.waffelart);
 
-        
+
     }
+    
+
+
+
 }
