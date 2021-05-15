@@ -3,28 +3,15 @@ namespace Aufgabe2_4 {
 
     export let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById("myFirstCanvas");
 
+    export interface Inhalt {
+        titel: string;
+        bild: string;
+
+    }
     export interface Eis {
-        waffel: Waffel;
-        kugel: Kugel;
-        sahne: Sahne;
-
-    }
-    export interface Waffel {
-        waffelbild: string;
-        waffelart: string;
-
-    }
-
-    export interface Kugel {
-        kugelbild: string;
-        kugelsorte: string;
-
-
-    }
-    export interface Sahne {
-        sahnebild: string;
-        sahneform: string;
-
+        waffeln: Inhalt[];
+        kugeln: Inhalt[];
+        sahne: Inhalt[];
 
     }
 

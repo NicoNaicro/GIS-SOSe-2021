@@ -1,62 +1,53 @@
 namespace Aufgabe2_4 {
 
 
-    //    export let alleWaffeln: Waffel[] = [{ waffelart: "schokowaffel", waffelbild: "braunwaffel.png" }, { waffelart: "mangowaffel", waffelbild: "orangewaffel.png" }, { waffelart: "erdbeerwaffel", waffelbild: "pinkwaffel.png" }];
-
-    //    export let alleKugeln: Kugel[] = [{ kugelsorte: "erdbeere", kugelbild: "erdbeere.png" }, { kugelsorte: "schoko", kugelbild: "braunwaffel.png" }, { kugelsorte: "mango", kugelbild: "orangewaffel.png" }];
-
-    //    export let alleSahne: Sahne[] = [{ sahneform: "groß", sahnebild: "sahne3.png" }, { sahneform: "mittel", sahnebild: "sahne2.png" }, { sahneform: "klein", sahnebild: "sahne1.png" }];
-
-
-   
     export let eisJSON: string = 
         `
         {
-        "Waffel": [
+        "waffeln": [
             {
-                "waffelart": "schokowaffel",
-                "waffelbild": "braunwaffel.png"
+                "titel": "schokowaffel",
+                "bild": "braunwaffel.png"
             }, 
             {
-                "waffelart": "mangowaffel",
-                "waffelbild": "orangewaffel.png" 
+                "titel": "mangowaffel",
+                "bild": "orangewaffel.png" 
             },
             { 
-                "waffelart": "erdbeerwaffel",
-                "waffelbild": "pinkwaffel.png" 
+                "titel": "erdbeerwaffel",
+                "bild": "pinkwaffel.png" 
             }
         ], 
-        "Kugel": [
+        "kugeln": [
             {
-                "kugelsorte": "erdbeere",
-                "kugelbild": "erdbeere.png"
+                "titel": "erdbeere",
+                "bild": "erdbeere.png"
             }, 
             {
-                "kugelsorte": "schoko",
-                "kugelbild": "braunwaffel.png"
+                "titel": "schokolade",
+                "bild": "schoko.png"
             }, 
             { 
-                "kugelsorte": "mango",
-                "kugelbild": "orangewaffel.png"
+                "titel": "mango",
+                "bild": "mango.png"
             }
         ], 
-        "Sahne": [
+        "sahne": [
             {
-                "sahneform": "groß",
-                "sahnebild": "sahne3.png"
+                "titel": "groß",
+                "bild": "sahne3.png"
             }, 
             {
-                "sahneform": "mittel",
-                "sahnebild": "sahne2.png"
+                "titel": "mittel",
+                "bild": "sahne2.png"
             }, 
             {
-                "sahneform": "klein",
-                "sahnebild": "sahne1.png" 
+                "titel": "klein",
+                "bild": "sahne1.png" 
             }
         ]
     }
     `;
     
-    export let g = JSON.parse(eisJSON);
-
+    
 }
