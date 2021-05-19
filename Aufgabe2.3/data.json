@@ -1,9 +1,5 @@
-namespace Aufgabe2_4 {
 
-
-    export let eisJSON: string = 
-        `
-        {
+     {  
         "waffeln": [
             {
                 "titel": "schokowaffel",
@@ -47,7 +43,6 @@ namespace Aufgabe2_4 {
             }
         ]
     }
-    `;
     
     
-}
+    

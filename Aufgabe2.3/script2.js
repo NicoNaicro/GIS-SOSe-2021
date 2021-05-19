@@ -1,7 +1,7 @@
 "use strict";
 var Aufgabe2_4;
 (function (Aufgabe2_4) {
-    let alleObjekte = JSON.parse(Aufgabe2_4.eisJSON);
+    let alleObjekte = JSON.parse(eisJSON);
     function createOptions(_part) {
         let div = document.createElement("div");
         div.style.maxWidth = "150px";
