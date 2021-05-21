@@ -104,6 +104,22 @@ var Aufgabe2_5;
         console.log(s);
         auswahl(s);
     }
-    communicate("https://github.com/NicoNaicro/GIS-SOSe-2021/blob/main/Aufgabe2.5/data.json");
+    communicate("https://niconaicro.github.io/GIS-SOSe-2021/Aufgabe2.5/data.json");
+    async function Daten(_url) {
+        let query = new URLSearchParams(localStorage);
+        _url = _url + "?" + query.toString();
+        let answer = await fetch(_url);
+        let output = await answer.json();
+        let displayResponse = document.getElementById("3c");
+        if (output.error) {
+            displayResponse.className = "Error";
+            displayResponse.innerText = output.error;
+        }
+        else {
+            displayResponse.className = "Message";
+            displayResponse.innerText = output.Message;
+        }
+    }
+    Daten("https://gis-communication.herokuapp.com");
 })(Aufgabe2_5 || (Aufgabe2_5 = {}));
 //# sourceMappingURL=script2.js.map
