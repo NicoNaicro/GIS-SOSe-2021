@@ -1,0 +1,21 @@
+{
+  "name": "gis-sose-2021",
+  "version": "1.0.0",
+  "description": "srgfergefws\r tuik\r fwe",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./Aufgabe3.1/server/script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoNaicro/GIS-SOSe-2021.git"
+  },
+  "author": "Nico Baier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicoNaicro/GIS-SOSe-2021/issues"
+  },
+  "homepage": "https://github.com/NicoNaicro/GIS-SOSe-2021#readme"
+}
