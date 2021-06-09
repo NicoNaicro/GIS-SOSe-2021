@@ -22,7 +22,7 @@ var P_3_2Server;
         _url = _url + "?" + query.toString();
         let answer = await fetch(_url);
         let output = await answer.json();
-        displayResponse.innerHTML += "Name: " + output.name + "Mail: " + output.email + " Subject: " + output.subject;
+        displayResponse.innerHTML += "Name: " + output.name + "Mail: " + output.email + " Betreff: " + output.subject;
         console.log(answer);
         console.log(output);
     }
