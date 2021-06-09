@@ -3,7 +3,7 @@ namespace P_3_2Server {
     async function sendDataHTML(): Promise<void> {
         let formData: FormData = new FormData(document.forms[0]);
     
-        let _url: RequestInfo = "https://gissigassi.herokuapp.com/";
+        let _url: RequestInfo = "https://gissigassi.herokuapp.com";
         _url += "/html";
         // tslint:disable-next-line: no-any
         let query: URLSearchParams = new URLSearchParams(<any>formData);
@@ -15,7 +15,7 @@ namespace P_3_2Server {
     async function sendDataJSON(): Promise<void> {
         let formData: FormData = new FormData(document.forms[0]);
      
-        let _url: RequestInfo = "https://gissigassi.herokuapp.com/";
+        let _url: RequestInfo = "https://gissigassi.herokuapp.com";
         _url += "/json";
         // tslint:disable-next-line: no-any
         let query: URLSearchParams = new URLSearchParams(<any>formData);

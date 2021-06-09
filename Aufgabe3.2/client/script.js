@@ -4,7 +4,7 @@ var P_3_2Server;
     let displayResponse = document.getElementById("answer");
     async function sendDataHTML() {
         let formData = new FormData(document.forms[0]);
-        let _url = "https://gissigassi.herokuapp.com/";
+        let _url = "https://gissigassi.herokuapp.com";
         _url += "/html";
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
@@ -15,7 +15,7 @@ var P_3_2Server;
     }
     async function sendDataJSON() {
         let formData = new FormData(document.forms[0]);
-        let _url = "https://gissigassi.herokuapp.com/";
+        let _url = "https://gissigassi.herokuapp.com";
         _url += "/json";
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
