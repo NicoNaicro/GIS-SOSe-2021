@@ -4,20 +4,14 @@ var P_3_2Server;
     let displayResponse = document.getElementById("answer");
     async function sendDataHTML() {
         let formData = new FormData(document.forms[0]);
-        console.log(":" + formData.get("name"));
-        for (let entry of formData) {
-            console.log(entry);
-            console.log("name: " + entry[0]);
-            console.log("value: " + entry[1]);
-        }
-        // tslint:disable-next-line: no-any
-        let query = new URLSearchParams(formData);
         let _url = "https://gissigassi.herokuapp.com/";
         _url += "/html";
+        // tslint:disable-next-line: no-any
+        let query = new URLSearchParams(formData);
         _url = _url + "?" + query.toString();
         let answer = await fetch(_url);
         let output = await answer.text();
-        displayResponse.innerText = output;
+        displayResponse.innerHTML = output;
     }
     async function sendDataJSON() {
         let formData = new FormData(document.forms[0]);
@@ -27,18 +21,14 @@ var P_3_2Server;
         let query = new URLSearchParams(formData);
         _url = _url + "?" + query.toString();
         let answer = await fetch(_url);
-        let output = await answer.text();
-        let jsonOutput = output.substring(6, output.length - 1);
-        console.log(output.substring(6, output.length - 1));
-        console.log("JSON: Antwort:");
-        console.log(jsonOutput);
-        displayResponse.innerHTML = jsonOutput;
-        console.log(displayResponse);
+        let output = await answer.json();
+        displayResponse.innerHTML += "Name: " + output.name + "Mail: " + output.email + " Subject: " + output.subject;
         console.log(answer);
+        console.log(output);
     }
-    let sendButtonHTML = document.getElementById("button");
+    let sendButtonHTML = document.getElementById("htmlbutton");
     sendButtonHTML.addEventListener("click", sendDataHTML);
-    let sendButtonJSON = document.getElementById("button");
+    let sendButtonJSON = document.getElementById("jsonbutton");
     sendButtonJSON.addEventListener("click", sendDataJSON);
 })(P_3_2Server || (P_3_2Server = {}));
 //# sourceMappingURL=script.js.map
