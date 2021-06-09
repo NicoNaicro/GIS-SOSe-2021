@@ -22,7 +22,7 @@ namespace P_3_2Server {
         _url = _url + "?" + query.toString();
         let answer: Response = await fetch(_url);
         let output: JsonAnswer = await answer.json();
-        displayResponse.innerHTML += "Name: " + output.name + "Mail: " + output.email + " Betreff: " +  output.subject;
+        displayResponse.innerHTML += "Name: " + output.name + "Mail: " + output.email + " Betreff: " +  output.betreff;
         console.log(answer);
         console.log(output);
         
@@ -38,6 +38,6 @@ namespace P_3_2Server {
     interface JsonAnswer {
         name: string;
         email: string;
-        subject: string;
+        betreff: string;
     }
 }
