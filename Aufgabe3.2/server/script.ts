@@ -21,7 +21,7 @@ export namespace P_3_2Server {
         if (_request.url) {
             let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
             let path: string = <string>url.pathname;
-            let input: Data = {name: url.query.name + " ", mail: url.query.email + " ", subject: url.query.subject + " "};
+            let input: Data = {name: url.query.name + " ", mail: url.query.email + " ", subject: url.query.betreff + " "};
             if (path == "/sendData") {
                 let data: string = await sendDatabaseData(databaseURL, input);
                 _response.write(data);
