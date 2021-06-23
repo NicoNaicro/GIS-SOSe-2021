@@ -2,10 +2,20 @@
 var P_3_2Server;
 (function (P_3_2Server) {
     let displayResponse = document.getElementById("answer");
-    async function sendDataHTML() {
+    async function senddata() {
         let formData = new FormData(document.forms[0]);
         let _url = "https://gissigassi.herokuapp.com";
-        _url += "/html";
+        _url += "/sendData";
+        // tslint:disable-next-line: no-any
+        let query = new URLSearchParams(formData);
+        _url = _url + "?" + query.toString();
+        let answer = await fetch(_url);
+        console.log(answer);
+    }
+    async function getdata() {
+        let formData = new FormData(document.forms[0]);
+        let _url = "https://gissigassi.herokuapp.com";
+        _url += "/getData";
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
         _url = _url + "?" + query.toString();
@@ -13,22 +23,7 @@ var P_3_2Server;
         let output = await answer.text();
         displayResponse.innerHTML = output;
     }
-    async function sendDataJSON() {
-        let formData = new FormData(document.forms[0]);
-        let _url = "https://gissigassi.herokuapp.com";
-        _url += "/json";
-        // tslint:disable-next-line: no-any
-        let query = new URLSearchParams(formData);
-        _url = _url + "?" + query.toString();
-        let answer = await fetch(_url);
-        let output = await answer.json();
-        displayResponse.innerHTML += "Name: " + output.name + "Mail: " + output.email + " Betreff: " + output.betreff;
-        console.log(answer);
-        console.log(output);
-    }
-    let sendButtonHTML = document.getElementById("htmlbutton");
-    sendButtonHTML.addEventListener("click", sendDataHTML);
-    let sendButtonJSON = document.getElementById("jsonbutton");
-    sendButtonJSON.addEventListener("click", sendDataJSON);
+    document.getElementById("sendbutton").addEventListener("click", senddata);
+    document.getElementById("getbutton").addEventListener("click", getdata);
 })(P_3_2Server || (P_3_2Server = {}));
 //# sourceMappingURL=script.js.map

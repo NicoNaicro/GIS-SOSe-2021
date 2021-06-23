@@ -13,7 +13,7 @@ export namespace P_3_2Server {
         server.addListener("request", handleRequest);       //Eventlistener hinzufügen
         server.listen(_port);
     }
-    let databaseURL: string = "mongodb+srv://Naicro:<password>@gissigassi.7155q.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+    let databaseURL: string = "mongodb+srv://Naicro:123du@gissigassi.7155q.mongodb.net/abgabe34?retryWrites=true&w=majority";
 
     async function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): Promise <void> {      //Funktion um Zugriff zu gewähren und gibt URL zurück
         _response.setHeader("Access-Control-Allow-Origin", "*");
@@ -54,7 +54,7 @@ export namespace P_3_2Server {
         let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
-        let orders: Mongo.Collection = mongoClient.db("LetzteAbgabe").collection("Daten");
+        let orders: Mongo.Collection = mongoClient.db("abgabe34").collection("abgabe34");
         orders.insertOne(_formData);
         let answer: string = "Antwort";
         return answer;
