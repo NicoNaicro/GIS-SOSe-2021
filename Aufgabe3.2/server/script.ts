@@ -44,7 +44,7 @@ export namespace P_3_2Server {
         let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
-        let orders: Mongo.Collection = mongoClient.db("LetzteAbgabe").collection("Daten");
+        let orders: Mongo.Collection = mongoClient.db("abgabe34").collection("abgabe34");
         console.log("Database connection", orders != undefined);
         let cursor: Mongo.Cursor = orders.find();
         let data: Data[] = await cursor.toArray();

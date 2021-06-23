@@ -40,7 +40,7 @@ var P_3_2Server;
         let options = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
-        let orders = mongoClient.db("LetzteAbgabe").collection("Daten");
+        let orders = mongoClient.db("abgabe34").collection("abgabe34");
         console.log("Database connection", orders != undefined);
         let cursor = orders.find();
         let data = await cursor.toArray();
