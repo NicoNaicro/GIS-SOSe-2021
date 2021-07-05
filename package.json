@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node ./Aufgabe3.2/server/script.js"
+    "start": "node ./Memory/server/script.js"
   },
   "repository": {
     "type": "git",
