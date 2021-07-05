@@ -1,0 +1,42 @@
+body {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+color: grey;
+font-family: sans-serif;
+}
+
+h1 {
+    color: rgb(255, 145, 0);
+    font-family: sans-serif;
+}
+#button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #f7ab09;
+    border: none;
+    border-radius: 25px;
+    margin: 5%;
+  }
+  #button:hover {background-color: #36a83a}
+  #navi {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #f7ab09;
+    border: none;
+    border-radius: 25px;
+   
+  }
+  #navi:hover {background-color: #36a83a}
+
