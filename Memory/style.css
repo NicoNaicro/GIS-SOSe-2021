@@ -3,6 +3,7 @@ body {
     margin: auto;
     text-align: center;
 color: grey;
+background-image: url('background.png');
 font-family: sans-serif;
 }
 
@@ -40,3 +41,21 @@ h1 {
   }
   #navi:hover {background-color: #36a83a}
 
+  #buttonshape {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #f7ab09;
+    border: none;
+    border-radius: 25px;
+   
+  }
+  table {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+  }
