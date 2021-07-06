@@ -21,7 +21,7 @@ export namespace Memory {
         if (_request.url) {
             let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
             let path: string = <string>url.pathname;
-            let input: Data = {name: url.query.name + " ", zeit: url.query.zeit + " "};
+            let input: Data = {name: url.query.name + "", zeit: url.query.zeit + ""};
             if (path == "/sendData") {
                 let data: string = await sendDatabaseData(databaseURL, input);
                 _response.write(data);
