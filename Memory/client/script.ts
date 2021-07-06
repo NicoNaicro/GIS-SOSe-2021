@@ -26,7 +26,6 @@ namespace Memory {
 
 
     }
-
     document.getElementById("sendbutton").addEventListener("click", senddata);
     document.getElementById("getbutton").addEventListener("click", getdata);
 }

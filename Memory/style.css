@@ -71,3 +71,6 @@ table {
   text-align: left;
 }
 
+li > label {
+margin: 5px;
+}

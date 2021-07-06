@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,20 @@
     <title>deinezeit</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div>
         <a href="index.html"><button id="navi">ZUR ÜBERSICHT</button></a>
     </div>
     <h1>DEINE ZEIT:</h1>
-    <button id="button">-zeit-</button>
-    <p>gib hier deinen Namen ein:</p>
-    <label for="name"></label>
-        <input type="text" name="name">
-        <button type="button" id="sendbutton">speichern</button>
+    <form action="">
+        <input id="showtime" type="text" name="zeit" readonly>
+        <p>gib hier deinen Namen ein:</p>
+        <input id="nameInput" type="text" name="name">
+        <button id="submit">abschicken</button>
+    </form>
+    <script src="deinZeit.js"></script>
 
 </body>
+
 </html>
