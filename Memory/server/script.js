@@ -16,14 +16,14 @@ var Memory;
         server.addListener("request", handleRequest); //Eventlistener hinzufügen
         server.listen(_port);
     }
-    let databaseURL = "mongodb+srv://Naicro:123du@gissigassi.7155q.mongodb.net/abgabe34?retryWrites=true&w=majority";
+    let databaseURL = "mongodb+srv://Naicro:123du@gissigassi.7155q.mongodb.net/Memory?retryWrites=true&w=majority";
     async function handleRequest(_request, _response) {
         _response.setHeader("Access-Control-Allow-Origin", "*");
         _response.setHeader("content-type", "text/html; charset=utf-8");
         if (_request.url) {
             let url = Url.parse(_request.url, true);
             let path = url.pathname;
-            let input = { name: url.query.name + " " };
+            let input = { name: url.query.name + " ", zeit: url.query.zeit + " " };
             if (path == "/sendData") {
                 let data = await sendDatabaseData(databaseURL, input);
                 _response.write(data);

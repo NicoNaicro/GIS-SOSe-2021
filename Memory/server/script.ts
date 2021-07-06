@@ -13,7 +13,7 @@ export namespace Memory {
         server.addListener("request", handleRequest);       //Eventlistener hinzufügen
         server.listen(_port);
     }
-    let databaseURL: string = "mongodb+srv://Naicro:123du@gissigassi.7155q.mongodb.net/abgabe34?retryWrites=true&w=majority";
+    let databaseURL: string = "mongodb+srv://Naicro:123du@gissigassi.7155q.mongodb.net/Memory?retryWrites=true&w=majority";
 
     async function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): Promise <void> {      //Funktion um Zugriff zu gewähren und gibt URL zurück
         _response.setHeader("Access-Control-Allow-Origin", "*");
@@ -21,7 +21,7 @@ export namespace Memory {
         if (_request.url) {
             let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
             let path: string = <string>url.pathname;
-            let input: Data = {name: url.query.name + " "};
+            let input: Data = {name: url.query.name + " ", zeit: url.query.zeit + " "};
             if (path == "/sendData") {
                 let data: string = await sendDatabaseData(databaseURL, input);
                 _response.write(data);
@@ -37,7 +37,7 @@ export namespace Memory {
     }
     interface Data {
         name: string;
-        
+        zeit: string;
     }
     async function getDatabaseData(_url: string): Promise<Data[]> {
         let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
