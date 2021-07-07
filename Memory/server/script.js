@@ -23,7 +23,7 @@ var Memory;
         if (_request.url) {
             let url = Url.parse(_request.url, true);
             let path = url.pathname;
-            let input = { name: url.query.name + "", zeit: url.query.zeit + "" };
+            let input = { name: url.query.name + " ", zeit: url.query.zeit + " " };
             if (path == "/sendData") {
                 let data = await sendDatabaseData(databaseURL, input);
                 _response.write(data);
