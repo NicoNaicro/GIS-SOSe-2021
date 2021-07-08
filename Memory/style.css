@@ -7,11 +7,21 @@ body {
   font-family: sans-serif;
 }
 
-h1 {
+h1, h2 {
   color: rgb(255, 145, 0);
   font-family: sans-serif;
+  
+}
+form > input{
+  border:ridge ;
+  
+  
+
 }
 
+p {
+  margin-top: 5%;
+}
 button {
   display: inline-block;
   padding: 15px 25px;
@@ -35,7 +45,8 @@ button:enabled:hover {
 }
 
 .smallbutton {
-  font-size: 12px;
+  font-size: 10px;
+  float: right;
 }
 
 
@@ -46,6 +57,7 @@ button:enabled:hover {
 li > label {
 margin: 5px;
 border: #f7ab09;
+border-radius: 25px;
 }
 
 li {
@@ -53,7 +65,10 @@ li {
   width: 60%;
   margin: 10px auto;
 }
-
+#submit {
+  font-size: 10px;
+  border-radius: 15px;
+}
 #admingrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -74,6 +89,7 @@ margin-top: 10vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 35px;
   justify-content: center;
+  margin-top: 10%;
 }
 
 #gamegrid > img {

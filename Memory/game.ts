@@ -130,7 +130,7 @@ class Timer {
 
 
 
-let timer: Timer = new Timer()
+let timer: Timer = new Timer();
 let timerID: number = 0;
 let running: boolean = false;
 let grid: Grid = new Grid();
