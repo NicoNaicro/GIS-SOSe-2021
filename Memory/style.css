@@ -12,7 +12,7 @@ h1 {
   font-family: sans-serif;
 }
 
-#button {
+button {
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -27,45 +27,17 @@ h1 {
   margin: 5%;
 }
 
-#button:hover {
+button:enabled:hover {
   background-color: #36a83a
 }
-
-#navi {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 15px;
-  cursor: pointer;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #f7ab09;
-  border: none;
-  border-radius: 25px;
+.navigationbutton {
+  float: left;
 }
 
-#navi:hover {
-  background-color: #36a83a
+.smallbutton {
+  font-size: 12px;
 }
 
-#buttonshape {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 15px;
-  cursor: pointer;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #f7ab09;
-  border: none;
-  border-radius: 25px;
-}
-
-table {
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-}
 
 #top10 {
   text-align: left;
@@ -73,4 +45,56 @@ table {
 
 li > label {
 margin: 5px;
+border: #f7ab09;
+}
+
+li {
+  text-align: center;
+  width: 60%;
+  margin: 10px auto;
+}
+
+#admingrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+margin-top: 10vh;
+  grid-gap: 35px;
+  justify-content: center;
+  float: unset;
+}
+
+#admingrid > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#gamegrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 35px;
+  justify-content: center;
+}
+
+#gamegrid > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 600px) {
+#admingrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  grid-gap: 2%;
+  justify-content: center;
+}
+#gamegrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 2%;
+  justify-content: center;
+}
 }

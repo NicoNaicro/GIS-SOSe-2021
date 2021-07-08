@@ -10,7 +10,7 @@ class Grid {
             positions.push([x, y]);
         }
         this.cards = new Array();
-        let images = ["a", "b", "c", "d", "e", "f", "g", "h"];
+        let images = JSON.parse(sessionStorage.getItem("images"));
         while (positions.length > 0) {
             let index = Math.floor(Math.random() * images.length);
             let imageURL = images[index];
@@ -62,15 +62,16 @@ class Card {
         this.background = "rückseite.png";
     }
     show() {
-        let gameGrid = document.getElementById("gameGrid");
-        let cardImg = gameGrid.querySelectorAll("tr")[this.y].querySelectorAll("th")[this.x].querySelector("img");
+        console.log("show");
+        let gameGrid = document.getElementById("gamegrid");
+        let cardImg = gameGrid.querySelectorAll("img")[this.x + this.y * 4];
         cardImg.src = this.foreground;
         cardImg.alt = this.foreground;
         this.open = true;
     }
     hide() {
-        let gameGrid = document.getElementById("gameGrid");
-        let cardImg = gameGrid.querySelectorAll("tr")[this.y].querySelectorAll("th")[this.x].querySelector("img");
+        let gameGrid = document.getElementById("gamegrid");
+        let cardImg = gameGrid.querySelectorAll("img")[this.x + this.y * 4];
         cardImg.src = this.background;
         this.open = false;
     }
@@ -85,7 +86,7 @@ class Timer {
     update(id) {
         if (this.running && this.id == id) {
             this.seconds += 1;
-            let timeDOM = document.getElementById("buttonshape");
+            let timeDOM = document.getElementById("timebutton");
             let padding = this.seconds % 60 < 10 ? "0" : "";
             timeDOM.textContent = `DEINE ZEIT: ${Math.floor(this.seconds / 60)}:${padding}${this.seconds % 60}`;
             setTimeout(() => this.update(id), 1000);
