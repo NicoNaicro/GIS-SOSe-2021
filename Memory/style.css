@@ -15,12 +15,23 @@ h1, h2 {
 form > input{
   border:ridge ;
   
-  
+}
+
+#showtime {
+  border: none;
+  text-align: center;
+  font-size: 35px;
+  font-family: sans-serif;
+  font-style:inherit;
+  font-weight: bolder;
+  color: gray;
+  background-image: linear-gradient(to right,  rgba(255, 255, 255, 0.603), rgb(221, 221, 221), rgba(255, 255, 255, 0.603));
 
 }
 
+
 p {
-  margin-top: 5%;
+  margin-top: 7%;
 }
 button {
   display: inline-block;
@@ -82,8 +93,8 @@ li {
 }
 
 #submit {
-  font-size: 10px;
-  border-radius: 15px;
+  font-size: 15px;
+  border-radius: 30px;
 }
 #admingrid {
   display: grid;
